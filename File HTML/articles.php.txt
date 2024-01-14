@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="it">
+    <head>
+        <title>Lista Articoli</title>
+        <meta charset="utf-8">
+        <meta name="description" content="Blog divulgativo">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="icon" href="favicon.ico">
+        <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+        <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="public/Font/css/all.min.css">
+        <link rel="stylesheet" href="public/css/bootstrap.min.css">
+        <link rel="stylesheet" href="public/css/clean-blog.min.css">
+        <link rel="stylesheet" href="Custom/ArticlesStile.css">
+        <script src="public/jquery/jquery.js"></script>
+        <script src="Script/Tabling.js"></script>        
+        <script src="Script/Reading.js"></script>
+        <script src="Script/Routes.js"></script>
+    </head>
+    
+    <body>
+        
+        <header>
+            <?php include 'Shared/Navbar.php'; ?>
+        </header>
+        
+        <div class="row mt-lg-5 ml-2">            
+            <div class="container mt-5 ml-xl-2 col-md-4">
+                <div>
+                  <select name="state" id="maxrow" class="form-control" style="max-width: 40%;">
+                    <option value="500">All</option>
+                    <option value="5">5</option>
+                    <option value="10">10</option>
+                    <option value="20">20</option>
+                  </select>
+                </div>
+                <div class="card mt-5">
+                    <div class="card-header">
+                        <h5 class="text-lg-center text-danger">Lista Articoli</h5>
+                        <div class="clearfix"></div>
+                    </div>
+                    <div class="content">
+
+                        <div class="table-responsive">
+                            <table class="table" id="mytable">                
+                                <tbody>
+                                    
+                                </tbody>
+                                <!-- Il thead sta dopo il tbody per valorizzare la variabile category -->
+                                <thead>
+                                    <tr>
+                                        <th class="text-left text-success" style="background-color: #6b0a5a;">Articoli </th>
+                                    </tr>
+                                </thead>
+                                <tfoot>
+                                <div class="pagination-container">
+                                    <nav>
+                                        <ul class="pagination"></ul>
+                                    </nav>
+                                </div>
+                                </tfoot>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+             <div class="col-sm-6 mr-lg-5 mt-lg-5">
+                <div class="card text-justify" id="articleText">
+                    <div class="card-body">
+                        <div class="card-text" id="demoObject">
+                            In questa sezione puoi trovare una serie di articoli dedicati a <?php echo $category; ?>
+                            cercherò di essere il più esplicito e sintetico possibile nello spiegare
+                            soluzioni interessanti ed utili allo sviluppo di programmi
+                            stand alone.
+                            <br>
+                            BUONA LETTURA.....
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+        <hr>
+        <br>
+        <br>
+        <br>
+        <br>
+        <footer class="card-footer mb-3">
+            <?php include 'Shared/Footer.php'; ?>
+        </footer>
+    </body>
+</html>

@@ -1,0 +1,56 @@
+#tinymce {
+  background: #FAFFE6;
+}
+
+#demotext {
+    text-align: center;
+    text-shadow: 0 -1px 4px #FFF, 0 -2px 10px #ff0, 0 -10px 20px #ff8000, 0 -18px 40px #F00, 2px 2px 2px rgba(28,110,164,0);
+    color: #FFFFFF;
+    background: #333333;
+}
+
+#freccia{
+    position: absolute;
+    top: 35px;
+    left: 5px;
+}
+#articleText{
+    -webkit-box-shadow: 0px 0px 0px 5px #A0A0A0, inset 0px 10px 27px -8px #141414, inset 0px -10px 27px -8px #A31925, 5px 5px 15px 5px rgba(0,0,0,0); 
+    box-shadow: 0px 0px 0px 5px #A0A0A0, inset 0px 10px 27px -8px #141414, inset 0px -10px 27px -8px #A31925, 5px 5px 15px 5px rgba(0,0,0,0);
+    background: #C8C9C7;
+    -webkit-touch-callout: none; /*impedisce selezione ed immagine testo*/
+    -webkit-user-select: none; /*impedisce selezione ed immagine testo*/
+    -khtml-user-select: none; /*impedisce selezione ed immagine testo*/
+    -moz-user-select: none; /*impedisce selezione ed immagine testo*/
+    user-select: none; /*impedisce selezione ed immagine testo*/
+}
+body{
+    width: 100%;
+    background-color: #666666;
+    background: #555A63;
+    background: -moz-linear-gradient(left, #555A63 0%, #9BB6CB 50%, #6B6F75 100%);
+    background: -webkit-linear-gradient(left, #555A63 0%, #9BB6CB 50%, #6B6F75 100%);
+    background: linear-gradient(to right, #555A63 0%, #9BB6CB 50%, #6B6F75 100%);
+}
+img{
+    max-width: 100%;
+}
+.listPage{
+     padding-right: 5px;
+   cursor: pointer;
+   text-decoration: underline white;
+   color: #6f42c1;
+}
+
+@media(max-width: 480px){
+    .container.mt-5.ml-xl-2.col-md-4{
+        margin-bottom: 20px;
+    }
+    #articleText {
+        max-width: 100%;
+    }
+    img{
+        max-width: 100%;
+    }
+    
+}

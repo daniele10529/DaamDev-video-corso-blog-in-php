@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Lista Categorie</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="../public/Font/css/all.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet'
+          type='text/css'>
+    <link
+        href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800'
+        rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="../public/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../public/css/clean-blog.min.css">
+    <link rel="stylesheet" href="../Custom/DashboardStile.css">
+    <script src="../Script/Confirm.js"></script>
+    <script src="../Script/Routes.js"></script>
+</head>
+
+<body>
+<header>
+    <?php include '../Shared/Navbar.php'; ?>
+</header>
+
+<?php
+
+if(strlen($error) > 0){
+    echo "<p class='alert alert-danger mr-lg-5 ml-lg-5'>" . $error . "</p>";
+}
+if(strlen($success) > 0){
+    echo "<p class='alert alert-success mr-lg-5 ml-lg-5'>" . $success . "</p>";
+}
+
+?>
+
+<div class="container col-md-10 col-md-offset-2">
+    <div class="card mt-5">
+        <div class="card-header">
+            <h5 class="float-left">Lista Categorie</h5>
+            <div class="clearfix"></div>
+        </div>
+        <div class="content">
+
+            <div class="table-responsive">
+                <table class="table">
+                    <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Categoria</th>
+                        <th>Slug</th>
+                        <th>Path</th>
+                        <th>Action</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <?php $readCategories->readAll(); ?>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="col-lg-12 ml-5">
+    <div class="row banner ml-5 mb-5">
+        <div class="row-content ml-2 mt-3 mb-3">
+            <a href="listCategories.php" type="submit" name="btndash" class="btn btn-danger">Reset</a>
+        </div>
+        <div class="row-content ml-5 mt-3 mb-3" id="dashboard">
+            <a href="dashboard.php" type="submit" name="btndash" class="btn btn-info">Torna alla Dashboard</a>
+        </div>
+    </div>
+</div>
+ 
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<?php include '../Shared/FooterDashboard.php'; ?>
+</body>
+</html>

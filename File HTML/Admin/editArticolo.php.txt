@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Modifica articolo</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="../public/Font/css/all.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet'
+          type='text/css'>
+    <link
+        href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800'
+        rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="../public/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../public/css/clean-blog.min.css">
+    <link rel="stylesheet" href="../Custom/DashboardStile.css">
+    <script src="../Script/Routes.js"></script>
+</head>
+
+<body>
+<header>
+    <?php include '../Shared/Navbar.php'; ?>
+</header>
+
+<div class="col-lg-10 mt-3 ml-5">
+    <a href="#img" class="btn btn-dark">Carica immagine</a>
+</div>
+
+<div class="card ml-5 mr-5 mt-lg-5">
+    <div class="card-header">
+        Modifica Articolo
+    </div>
+
+    <div class="col-lg-12">
+        <form name="formArt" class="form-group" action="" method="POST">
+            <?php
+            if(strlen($error) > 0){
+                echo "<p class='alert alert-danger'>".$error."</p>";
+            }
+            if(strlen($success) > 0){
+                echo "<p class='alert alert-success'>".$success."</p>";
+            }
+            if(strlen($errorimg) > 0){
+                echo "<p class='alert alert-danger'>".$errorimg."</p>";
+            }
+            if(strlen($successimg) > 0){
+                echo "<p class='alert alert-success'>".$successimg."</p>";
+            }
+            ?>
+            <div class="container mt-xl-5 border border-dark">
+                <div class="form-group">
+                    <label for="content" class="col-lg-12 control-label">Contenuto articolo</label>
+                    <div class="col-lg-12 mt-3">
+                        <textarea class="form-control" rows="20" id="content" name="content"><?php echo $content; ?></textarea>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-2 mt-3 mb-3">
+                        <a type="submit" href="listArticoli.php" name="btnCancel" class="btn btn-outline-danger">Cancel</a>
+                    </div>
+                    <div class="col-md-2 mt-3 mb-3">
+                        <button type="submit" name="btnUpload" class="btn btn-success">Modifica</button>
+                    </div>
+                </div>
+
+            </div>
+        </form>
+    </div>
+
+    <div class="col-md-6 ml-5 mt-3 mb-3" id="dashboard">
+        <a href="dashboard.php" type="submit" name="btndash" class="btn btn-info">Torna alla Dashboard</a>
+    </div>
+</div>
+
+<div id="img"></div>
+<div class="card ml-5 mr-5 mt-3">
+    <div class="card-header">
+        Inserisci Immagini
+    </div>
+
+    <div class="col-lg-12">
+        <form name="formImg" class="form-group" action="" method="POST" enctype="multipart/form-data">
+            <div class="col-md-6 mt-2">
+                <label for="image" style="color: #6b0a5a;">Inserisci l'immagine da caricare</label>
+                <input type="file" name="imageUpload" class="form-control" id="image">
+            </div>
+            <div class="col-md-4 mt-3 mb-3">
+                <button type="submit" name="btnUploadimg" class="btn btn-success">Upload Immagini</button>
+            </div>
+        </form>
+    </div>
+</div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<?php include '../Shared/FooterDashboard.php'; ?>
+</body>
+</html>
+

@@ -1,0 +1,4 @@
+<script src="../public/jquery/jquery.js"></script>
+<script src="../public/js/popper.js"></script>
+<script src="../public/js/bootstrap.min.js"></script>
+<script src="../public/js/clean-blog.min.js"></script>

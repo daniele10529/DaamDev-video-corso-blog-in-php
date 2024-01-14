@@ -1,0 +1,22 @@
+body{
+    background: #555A63;
+    background: -moz-linear-gradient(left, #555A63 0%, #9BB6CB 50%, #6B6F75 100%);
+    background: -webkit-linear-gradient(left, #555A63 0%, #9BB6CB 50%, #6B6F75 100%);
+    background: linear-gradient(to right, #555A63 0%, #9BB6CB 50%, #6B6F75 100%);
+}
+fieldset{
+    padding-left: 2%;
+    font-size: 18px;
+    border: 2px solid rgb(0,0,0);
+    border-radius: 5px;
+    background-color: #d4cefb;
+}
+@media(max-width: 360px){
+  
+    select{
+        max-width: 100%;
+    }
+    .row-content.ml-5{
+        margin-top: 10px;
+    }
+}

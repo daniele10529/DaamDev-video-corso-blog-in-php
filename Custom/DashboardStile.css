@@ -1,0 +1,25 @@
+body{
+    background: #555A63;
+    background: -moz-linear-gradient(left, #555A63 0%, #9BB6CB 50%, #6B6F75 100%);
+    background: -webkit-linear-gradient(left, #555A63 0%, #9BB6CB 50%, #6B6F75 100%);
+    background: linear-gradient(to right, #555A63 0%, #9BB6CB 50%, #6B6F75 100%);
+}
+img{
+    max-width: 50px;
+    max-height: 50px;
+}
+@media(max-width: 360px){
+  
+    .btn.btn-outline-info{
+        margin-bottom: 10px;
+    }
+    select{
+        max-width: 100%;
+    }
+    #btnsContainer{
+        max-width: 100%;
+    }
+    #dashboard{
+        max-width: 70%;
+    }
+}

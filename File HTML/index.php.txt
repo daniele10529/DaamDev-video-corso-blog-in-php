@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <title>My blog</title>
+    <meta charset="utf-8">
+    <meta name="description" content="Blog divulgativo">
+    <meta name="author" content="daam development soft">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="icon" href="favicon.ico">
+    <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="public/Font/css/all.min.css">
+    <link rel="stylesheet" href="public/css/bootstrap.min.css">
+    <link rel="stylesheet" href="public/css/clean-blog.min.css">
+    <link rel="stylesheet" href="Custom/StileIndex.css">
+    <script src="Script/Routes.js"></script>
+</head>
+
+<body>
+<?php include 'Shared/Navbar.php'; ?>
+<header class="masthead" style="background-image: url('http://localhost/MyBlog/public/Img/home_page.jpg');
+ background-position: center;">
+
+    <div class="overlay"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-md-10 mx-auto">
+                <div class="site-heading">
+                    <h1>My WebSite</h1>
+                    <span class="subheading">My Blog</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<div class="container">
+    <div class="col-12 ml-xl-5">
+        <div class="col-md-6 ml-5"><h2 class="text-center">Categorie !!</h2></div>
+        <div class="col-lg-8 col-md-10 mx-auto">
+            <div class="post-preview">
+                <ul></ul>
+            </div>
+        </div>
+    </div>
+</div>
+<br>
+<hr>
+<br>
+<br>
+<br>
+<br>
+
+<footer class="card-footer mb-3">
+   <?php include 'Shared/Footer.php'; ?>
+</footer>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-dark ">
+    <a class="navbar-brand ml-xl-5 text-light font-weight-bold" id="home" onclick="home()" href="#">Il Blog divulgativo</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+                <a class="nav-link text-white" id="index" onclick="home()" href="#">Home</a>
+            </li>
+            <?php
+               if(isset($_SESSION['user'])){
+                   ?>
+            <li class="nav-item dropdown ml-lg-5">
+                <a class="nav-link dropdown-toggle text-white-50" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Admin
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class='dropdown-item' id="dashboard" onclick="dashboard()" href="#">Dashbard</a>
+                </div>               
+            </li>
+            <?php
+               }
+            ?>
+            <li class="nav-item dropdown ml-lg-5">
+                <a class="nav-link dropdown-toggle text-white-50" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Accounts
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <?php
+                      if(isset($_SESSION['user'])){
+                          echo "<span class='ml-2' style='color: #4a5568;text-decoration: #4dc0b5;'>
+                                 Hello ! ".$_SESSION['user']." </span>";
+                          echo "<a class='dropdown-item' id='logout' onclick='logout()' href='#'>Logout</a>";
+                      }
+                      else{
+                          echo"<a class='dropdown-item' id='login' onclick='login()' href='#'>Login</a>";
+                      }
+                    ?>
+                </div>
+            </li>
+        </ul>
+    </div>
+</nav>

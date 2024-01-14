@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <title>Dashboard</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <link rel="stylesheet" href="../public/Font/css/all.min.css">
+      <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+      <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+      <link rel="stylesheet" href="../public/css/bootstrap.min.css">
+      <link rel="stylesheet" href="../public/css/clean-blog.min.css">
+      <link rel="stylesheet" href="../Custom/DashboardStile.css">
+      <script src="../Script/Routes.js"></script>
+  </head>
+
+    <body>
+    <header>
+       <?php include_once '../Shared/Navbar.php'; ?>
+    </header>
+
+    <div class="container mt-xl-5" style="background-color: #2d3748">
+        <div class="row banner">
+            <div class="col-md-12 mt-5">
+                <div class="list-group"  style="background-color: #2d3748">
+                <div class="list-group-item"  style="background-color: #2d3748; color: mediumseagreen;">
+                        <div class="row-content">
+                            <h5><i class="fa fa-database mb-3"></i>  Articoli</h5>
+                            <a href="listArticoli.php" class="btn btn-outline-info">Lista articoli</a>
+                            <a href="insertArticolo.php" class="btn btn-success">Inserisci Articolo</a>
+                        </div>
+                    </div>
+                    <div class="list-group-separator mb-5"></div>
+                    <div class="list-group-item"  style="background-color: #2d3748; color: mediumseagreen;">
+                        <div class="row-content">
+                            <h5><i class="far fa-file-archive mb-3"></i>  Categorie</h5>
+                            <a href="listCategories.php" class="btn btn-outline-info">Lista categorie</a>
+                            <a href="insertCategory.php" class="btn btn-success">Aggiungi categoria</a>
+                        </div>
+                    </div>
+                    <div class="list-group-separator mb-5"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <?php include '../Shared/FooterDashboard.php'; ?>
+    </body>
+</html>
